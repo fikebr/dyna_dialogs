@@ -3,10 +3,13 @@
 This example demonstrates how to use dyna-dialogs after installation.
 
 Installation:
+    # Using pip:
     pip install git+https://github.com/fikebr/dyna-dialogs.git
-
-    # Or with optional logger utilities:
     pip install "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+    # Using uv (recommended):
+    uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
+    uv add "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
 
 Note: This example uses the optional logger utilities. 
 If you installed without [logger], comment out the ProjectLogger lines 

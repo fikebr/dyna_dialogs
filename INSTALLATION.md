@@ -55,7 +55,9 @@ git push origin v0.1.0
 
 ## Installation by Users
 
-### Basic Installation
+### Using pip
+
+#### Basic Installation
 
 ```bash
 # Install latest from default branch
@@ -65,7 +67,7 @@ pip install git+https://github.com/fikebr/dyna-dialogs.git
 pip install "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
 ```
 
-### Advanced Installation Options
+#### Advanced pip Options
 
 ```bash
 # Install specific version/tag
@@ -81,7 +83,7 @@ pip install -e .
 pip install -e ".[logger]"  # with logger utilities
 ```
 
-### Using with requirements.txt
+#### Using with requirements.txt
 
 ```txt
 # requirements.txt
@@ -92,6 +94,68 @@ dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git@v0.1.0
 
 # With optional logger
 dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git
+```
+
+### Using uv (Recommended)
+
+If you use [uv](https://github.com/astral-sh/uv) for package management:
+
+#### Add to Project
+
+```bash
+# From your project root, add dyna-dialogs as a dependency
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+# With optional logger utilities
+uv add "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+# Add specific version
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git@v0.1.0"
+```
+
+This automatically:
+- Downloads and installs the package
+- Adds it to your `pyproject.toml` dependencies
+- Updates your `uv.lock` file
+
+#### Manual Addition to pyproject.toml
+
+Alternatively, edit your `pyproject.toml`:
+
+```toml
+[project]
+dependencies = [
+    "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git",
+    # your other dependencies...
+]
+```
+
+Then sync:
+```bash
+uv sync
+```
+
+#### Update Package
+
+```bash
+# Update to latest from git
+uv lock --upgrade-package dyna-dialogs
+
+# Or remove and re-add
+uv remove dyna-dialogs
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
+```
+
+#### Editable Install for Development
+
+```bash
+# Clone the repository
+git clone https://github.com/fikebr/dyna-dialogs.git
+cd dyna-dialogs
+
+# Install in editable mode
+uv pip install -e .
+uv pip install -e ".[logger]"  # with logger utilities
 ```
 
 ## Usage in Other Applications

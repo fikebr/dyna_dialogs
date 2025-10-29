@@ -15,7 +15,7 @@ Create tkinter dialogs from simple pipe-delimited text templates.
 
 ## Installation
 
-### From Git Repository
+### Using pip
 
 ```bash
 # Basic installation (core functionality only)
@@ -24,24 +24,38 @@ pip install git+https://github.com/fikebr/dyna-dialogs.git
 # With optional logger utilities
 pip install "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
 
-# Editable mode for development
-git clone https://github.com/fikebr/dyna-dialogs.git
-cd dyna-dialogs
-pip install -e .
-
-# Editable with logger utilities
-pip install -e ".[logger]"
-```
-
-### Install from Specific Version/Branch
-
-```bash
 # Install specific tag/version
 pip install git+https://github.com/fikebr/dyna-dialogs.git@v1.0.0
 
 # Install from specific branch
 pip install git+https://github.com/fikebr/dyna-dialogs.git@dev
+
+# Editable mode for development
+git clone https://github.com/fikebr/dyna-dialogs.git
+cd dyna-dialogs
+pip install -e .
+pip install -e ".[logger]"  # with logger utilities
 ```
+
+### Using uv (Recommended)
+
+If you use [uv](https://github.com/astral-sh/uv) for package management:
+
+```bash
+# Add as dependency to your project
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+# Add with optional logger utilities
+uv add "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+# Add specific version
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git@v0.1.0"
+
+# Or manually add to pyproject.toml dependencies, then:
+uv sync
+```
+
+This adds dyna-dialogs to your `pyproject.toml` and `uv.lock` automatically.
 
 ### Requirements
 

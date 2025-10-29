@@ -85,6 +85,7 @@ dyna_dialogs/
 
 Once you push to git, users can install with:
 
+### Using pip
 ```bash
 # Basic installation
 pip install git+https://github.com/fikebr/dyna-dialogs.git
@@ -97,6 +98,23 @@ pip install git+https://github.com/fikebr/dyna-dialogs.git@v0.1.0
 
 # In requirements.txt
 dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git
+```
+
+### Using uv (Recommended)
+```bash
+# Add to project
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+# With logger utilities
+uv add "dyna-dialogs[logger] @ git+https://github.com/fikebr/dyna-dialogs.git"
+
+# Specific version
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git@v0.1.0"
+
+# In pyproject.toml (then run: uv sync)
+dependencies = [
+    "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git",
+]
 ```
 
 ## 📖 How Users Will Use It

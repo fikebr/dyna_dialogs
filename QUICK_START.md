@@ -4,8 +4,15 @@ This guide shows how to quickly integrate `dyna-dialogs` into your Python applic
 
 ## Installation
 
+### Using pip
 ```bash
 pip install git+https://github.com/fikebr/dyna-dialogs.git
+```
+
+### Using uv (Recommended)
+```bash
+# Add to your project
+uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
 ```
 
 ## Basic Usage
