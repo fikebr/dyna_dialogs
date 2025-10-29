@@ -1,0 +1,14 @@
+User Registration|600x500
+username|text
+email|text
+password|text
+confirm_password|text
+|divider
+bio|multiline
+country|selection|USA,Canada,UK,Australia,Other
+interests|checkgroup|sports,music,reading,gaming,coding
+account_type|radio|personal,business,educational
+|divider
+validate|button|main.validate_form
+reset|button|main.reset_form
+
