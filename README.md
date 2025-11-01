@@ -243,6 +243,17 @@ Features:
 
 **Note:** The core dialog functionality works with or without this logger. It uses standard Python logging, so you can use any logging configuration you prefer.
 
+## Contributing
+
+Found a bug or want to add a feature? See [CONTRIBUTING.md](CONTRIBUTING.md) for the development workflow.
+
+If you're using dyna-dialogs and want to contribute improvements:
+1. Clone the repository
+2. Install in editable mode: `uv pip install -e ~/path/to/dyna-dialogs`
+3. Make changes and test
+4. Commit and push to your branch
+5. Create a pull request
+
 ## License
 
 MIT

@@ -148,15 +148,20 @@ uv add "dyna-dialogs @ git+https://github.com/fikebr/dyna-dialogs.git"
 
 #### Editable Install for Development
 
+If you want to contribute changes back to dyna-dialogs:
+
 ```bash
 # Clone the repository
 git clone https://github.com/fikebr/dyna-dialogs.git
 cd dyna-dialogs
 
-# Install in editable mode
-uv pip install -e .
-uv pip install -e ".[logger]"  # with logger utilities
+# Install in editable mode from your project
+cd ~/projects/your-project
+uv pip install -e ~/projects/dyna-dialogs
+uv pip install -e "~/projects/dyna-dialogs[logger]"  # with logger utilities
 ```
+
+Now changes to `~/projects/dyna-dialogs/` are immediately reflected in your project. See `CONTRIBUTING.md` for the complete development workflow.
 
 ## Usage in Other Applications
 

@@ -79,7 +79,8 @@ dyna_dialogs/
 - [ ] Add `LICENSE` file (MIT is suggested in pyproject.toml)
 - [ ] Add `CHANGELOG.md` for version history
 - [ ] Test installation locally: `pip install .`
-- [ ] Test from git: `pip install git+https://github.com/yourusername/dyna-dialogs.git`
+- [ ] Test from git: `pip install git+https://github.com/fikebr/dyna-dialogs.git`
+- [x] Created `CONTRIBUTING.md` for development workflow
 
 ## 🚀 How Users Will Install
 
